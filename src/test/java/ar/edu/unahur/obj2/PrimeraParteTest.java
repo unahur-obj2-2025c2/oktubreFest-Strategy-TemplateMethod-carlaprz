@@ -26,10 +26,10 @@ public class PrimeraParteTest {
     Marca corona = new Rubia("Corona", Nacionalidad.CHECO, 3.0, 3.0);
     Jarra jarraCervezaRubia = new Jarra(corona, 1.0);
 
-    Persona dante = new Persona(65, Boolean.FALSE, 5.60, Nacionalidad.ALEMAN);
-    Persona thomas = new Persona(65, Boolean.FALSE, 6.35, Nacionalidad.BELGA);
-    Persona joaquin = new Persona(65, Boolean.FALSE, 8.00, Nacionalidad.CHECO);
-    Persona celeste = new Persona(65, Boolean.FALSE, 9.99, Nacionalidad.ALEMAN);
+    Persona dante = new Persona("Dante", 65.00, Boolean.FALSE, 5.60, Nacionalidad.ALEMAN);
+    Persona thomas = new Persona("Thomas", 105.50, Boolean.FALSE, 6.35, Nacionalidad.BELGA);
+    Persona joaquin = new Persona("Joaquin", 93.25, Boolean.FALSE, 8.00, Nacionalidad.CHECO);
+    Persona celeste = new Persona("Celeste", 63.75, Boolean.FALSE, 9.99, Nacionalidad.ALEMAN);
 
     @BeforeEach
     void initialize() {
