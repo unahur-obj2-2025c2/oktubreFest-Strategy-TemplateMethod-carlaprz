@@ -1,19 +1,20 @@
 package ar.edu.unahur.obj2.marcas;
 
 import ar.edu.unahur.obj2.graduaciones.Graduable;
+import ar.edu.unahur.obj2.personas.Nacionalidad;
 
 public abstract class Marca {
     private String nombre;
     private Double lupulo;
-    private String origen;
+    private Nacionalidad origen;
 
-    protected Marca(String nombre, String origen, Double lupulo) {
+    protected Marca(String nombre, Nacionalidad origen, Double lupulo) {
         this.nombre = nombre;
         this.origen = origen;
         this.lupulo = lupulo;
     }
 
-    public double abv() {
+    public double getGraduacionAlcoholica() {
         return getEstrategia().calcularGraduacion(this);
     }
 
@@ -21,7 +22,7 @@ public abstract class Marca {
         return lupulo;
     }
 
-    public String getPais() {
+    public Nacionalidad getOrigen() {
         return origen;
     }
 
@@ -30,5 +31,4 @@ public abstract class Marca {
     }
 
     abstract Graduable getEstrategia();
-
 }

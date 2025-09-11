@@ -15,6 +15,6 @@ public class GraduacionRoja implements Graduable {
 
     @Override
     public double calcularGraduacion(Marca marca) {
-        return 1.25 * GraduacionNegra.getInstance().calcularGraduacion(marca);
+        return GraduacionNegra.getGraduacionReglamentaria() * 1.25;
     }
 }

@@ -3,7 +3,7 @@ package ar.edu.unahur.obj2.graduaciones;
 import ar.edu.unahur.obj2.marcas.Marca;
 
 public class GraduacionNegra implements Graduable {
-    private double graduacionReglamentaria;
+    private static double graduacionReglamentaria;
     private static GraduacionNegra instance = new GraduacionNegra();
 
     private GraduacionNegra() {
@@ -15,12 +15,14 @@ public class GraduacionNegra implements Graduable {
 
     @Override
     public double calcularGraduacion(Marca marca) {
-        double porLupulo = 2.0 * marca.getLupulo() / 100.0;
-        return Math.min(graduacionReglamentaria, porLupulo);
+        return Math.min(graduacionReglamentaria, 2 * marca.getLupulo());
     }
 
-    public void setGraduacionReglamentaria(double nueva) {
-        this.graduacionReglamentaria = nueva;
+    public static void setGraduacionReglamentaria(double nueva) {
+        graduacionReglamentaria = nueva;
     }
+
+    public static double getGraduacionReglamentaria() {
+        return graduacionReglamentaria;    }
 
 }
